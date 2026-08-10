@@ -8,12 +8,10 @@
 
 ---
 
-[![Version][version-badge]][package]
-[![MIT License][license-badge]][license]
-
-[![PRs Welcome][prs-welcome-badge]][prs-welcome]
-[![Chat][chat-badge]][chat]
-[![Code of Conduct][coc-badge]][coc]
+[![Version](https://img.shields.io/npm/v/react-native-squircle-shape.svg?style=flat-square)](https://www.npmjs.com/package/react-native-squircle-shape)
+[![MIT License](https://img.shields.io/npm/l/react-native-squircle-shape.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![Code of Conduct](https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square)](https://github.com/kravchenko-anton/react-native-squircle-shape/blob/main/CODE_OF_CONDUCT.md)
 
 ## Features
 
