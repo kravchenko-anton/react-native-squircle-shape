@@ -1,0 +1,1 @@
+export { SquircleShapeView } from './SquircleShapeView';
