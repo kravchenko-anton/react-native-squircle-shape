@@ -1,11 +1,11 @@
 import {
   codegenNativeComponent,
-  type ColorValue,
+  type CodegenTypes,
   type ViewProps,
 } from 'react-native';
 
 interface NativeProps extends ViewProps {
-  color?: ColorValue;
+  cornerSmoothing: CodegenTypes.Float;
 }
 
 export default codegenNativeComponent<NativeProps>('SquircleShapeView');

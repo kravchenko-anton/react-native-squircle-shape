@@ -9,12 +9,18 @@ Pod::Spec.new do |s|
   s.homepage     = package["homepage"]
   s.license      = package["license"]
   s.authors      = package["author"]
+  s.swift_version = "5.9"
 
   s.platforms    = { :ios => min_ios_version_supported }
   s.source       = { :git => "https://github.com/kravchenko-anton/react-native-squircle-shape.git", :tag => "#{s.version}" }
 
   s.source_files = "ios/**/*.{h,m,mm,swift,cpp}"
   s.private_header_files = "ios/**/*.h"
+
+  s.pod_target_xcconfig = {
+    "DEFINES_MODULE" => "YES",
+    "SWIFT_COMPILATION_MODE" => "wholemodule"
+  }
 
   install_modules_dependencies(s)
 end

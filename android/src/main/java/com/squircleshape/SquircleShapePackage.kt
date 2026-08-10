@@ -1,17 +1,20 @@
 package com.squircleshape
 
-import com.facebook.react.BaseReactPackage
+import com.facebook.react.ReactPackage
 import com.facebook.react.bridge.NativeModule
 import com.facebook.react.bridge.ReactApplicationContext
-import com.facebook.react.module.model.ReactModuleInfoProvider
 import com.facebook.react.uimanager.ViewManager
+import java.util.ArrayList
 
-class SquircleShapeViewPackage : BaseReactPackage() {
+class SquircleShapeViewPackage : ReactPackage {
   override fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, *>> {
-    return listOf(SquircleShapeViewManager())
+    val viewManagers: MutableList<ViewManager<*, *>> = ArrayList()
+    viewManagers.add(SquircleShapeViewManager())
+    return viewManagers
   }
 
-  override fun getModule(name: String, reactContext: ReactApplicationContext): NativeModule? = null
-
-  override fun getReactModuleInfoProvider() = ReactModuleInfoProvider { emptyMap() }
+  @Deprecated("This method is unused in the New Architecture")
+  override fun createNativeModules(reactContext: ReactApplicationContext): List<NativeModule> {
+    return emptyList()
+  }
 }

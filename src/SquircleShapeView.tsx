@@ -1,9 +1,20 @@
-import { View, type ColorValue, type ViewProps } from 'react-native';
+import type { ReactElement } from 'react';
+import { View, type ViewProps } from 'react-native';
 
-type Props = ViewProps & {
-  color?: ColorValue;
+export type SquircleShapeViewProps = ViewProps & {
+  cornerSmoothing?: number;
 };
 
-export function SquircleShapeView({ color, style, ...rest }: Props) {
-  return <View {...rest} style={[style, { backgroundColor: color }]} />;
+export function SquircleShapeView({
+  cornerSmoothing = 0.6,
+  ...props
+}: SquircleShapeViewProps): ReactElement {
+  if (cornerSmoothing < 0 || cornerSmoothing > 1) {
+    throw new Error(
+      `cornerSmoothing must be between 0 and 1, inclusive. Received: ${cornerSmoothing}`
+    );
+  }
+
+  // Web fallback: standard View (no native squircle path).
+  return <View {...props} />;
 }

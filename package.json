@@ -1,7 +1,7 @@
 {
   "name": "react-native-squircle-shape",
   "version": "0.1.0",
-  "description": "a native implementation of squirle shape in react nativequircleShapeShapeSquircle Shape",
+  "description": "Native Figma-style squircle View for React Native (Fabric)",
   "main": "./lib/module/index.js",
   "types": "./lib/typescript/src/index.d.ts",
   "exports": {
@@ -122,10 +122,8 @@
       "javaPackageName": "com.squircleshape"
     },
     "ios": {
-      "components": {
-        "SquircleShapeView": {
-          "className": "SquircleShapeView"
-        }
+      "componentProvider": {
+        "SquircleShapeView": "SquircleShapeView"
       }
     }
   },

@@ -1,1 +1,4 @@
-export { SquircleShapeView } from './SquircleShapeView';
+export {
+  SquircleShapeView,
+  type SquircleShapeViewProps,
+} from './SquircleShapeView';

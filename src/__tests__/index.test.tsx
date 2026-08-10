@@ -1,3 +1,6 @@
-import { it } from '@jest/globals';
+import { it, expect } from '@jest/globals';
+import { SquircleShapeView } from '../index';
 
-it.todo('write a test');
+it('exports SquircleShapeView', () => {
+  expect(SquircleShapeView).toBeDefined();
+});
